@@ -1,0 +1,137 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=request.getContextPath() %>/clientResources/image/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<%=request.getContextPath() %>/clientResources/image/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=request.getContextPath() %>/clientResources/image/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%=request.getContextPath() %>/clientResources/image/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=request.getContextPath() %>/clientResources/image/favicon-16x16.png">
+    <link rel="manifest" href="<%=request.getContextPath() %>/clientResources/js/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/clientResources/css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/clientResources/css/responsive.css">
+</head>
+<body>
+	 <div class="preloader"></div><!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header header-style-one">
+            <div class="top-header">
+                <div class="container">
+                    <div class="left-info">
+                        <p><i class="cameron-icon-email"></i><a href="#">Person Re-identification for Video Surveillance</a></p>
+                    </div><!-- /.left-info -->
+                    <div class="right-info">
+                        <ul class="info-block">
+                            <li><i class="cameron-icon-support"></i><a href="#"></a></li>
+                            <!--<li><a href="cart.html" class="cart-btn"><i class="cameron-icon-shopping-bag"></i><span class="count-text">(0)</span></a></li>-->
+                        </ul>
+                    </div><!-- /.right-info -->
+                </div><!-- /.container -->
+            </div><!-- /.top-header -->
+            <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky">
+                <div class="container clearfix">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="logo-box clearfix">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="<%=request.getContextPath() %>/clientResources/image/logo-1-1.png" class="main-logo" alt="Awesome Image" />
+                            <img src="<%=request.getContextPath() %>/clientResources/image/logo-1-2.png" class="stricky-logo" alt="Awesome Image" /> 
+                        </a>
+                        <button class="menu-toggler" data-target=".header-style-one .main-navigation">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                    </div><!-- /.logo-box -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="main-navigation">
+                        <ul class=" navigation-box">
+                            <!-- <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                           
+                            <li>
+                                <a href="/login">Services</a>
+                            </li>
+                            <li>
+                                <a href="/login">Pages</a>
+                            </li>
+                            
+                            <li>
+                                <a href="/login">Shop</a>
+                            </li> -->
+                             <li>
+                                <a href="/login">About</a>
+                            </li>
+                            <li>
+                                <a href="/loadRegister">Register</a>
+                            </li>
+                            <li class="current"><a href="/login">Login</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                    
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header><!-- /.main-header header-style-one -->
+        
+        <section class="contact-form-wrapper">
+            <div class="container">
+                
+                    <div class="row no-gutters justify-content-center d-flex">
+                        
+                        <div class="col-lg-6 d-flex">
+                            <div class="contact-form-block my-auto">
+                                <div class="title-block">
+                                   <span class="tag-line"></span><!-- /.tag-line -->
+                                    <h2>Login</h2>
+                                </div><!-- /.title-block -->
+                                <form action="/j_spring_security_check" method="post" class="contact-form-one" name="login" onSubmit="return validatelogin();"><!-- class="contact-form-one contact-form-validated" -->
+                                    <input type="text" class="form-control" name="username" placeholder="Your Email">
+                                    <span class="error"><p id="email_error"></p></span>
+                                    <input type="password"  class="form-control"  name="password" placeholder="Your password">
+                                    <span class="error"><p id="password_error"></p></span>
+                                    <!--<textarea placeholder="Your Message" name="message"></textarea>-->
+									<center>
+                                    <input type="submit" value="Submit Now" style="width:200px;"></center>
+                                    
+                                </form>
+                            </div><!-- /.contact-form-block --> 
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                
+            </div><!-- /.container -->
+        </section><!-- /.contact-form-wrapper -->
+        
+    </div><!-- /.page-wrapper -->
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- /.scroll-to-top -->
+    <script src="<%=request.getContextPath() %>/clientResources/js/jquery.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/bootstrap.bundle.min.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/owl.carousel.min.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/waypoints.min.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/jquery.counterup.min.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/wow.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/jquery.validate.min.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/theme.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/formvalidation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk25E4mNfVIEt3tNl3K1HwNZVruVoFBlA"></script>
+    <!-- google map helper -->
+    <script src="<%=request.getContextPath() %>/clientResources/js/gmaps.js"></script>
+    <script src="<%=request.getContextPath() %>/clientResources/js/map-helper.js"></script>
+</body>
+</html>
